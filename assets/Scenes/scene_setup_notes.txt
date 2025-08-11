@@ -1,0 +1,43 @@
+Initial Scene Setup Notes for MainGame Scene:
+
+1.  **Create New Scene**:
+    *   Open Unity Hub and select the project.
+    *   In the Unity Editor, go to `File > New Scene`.
+    *   Choose the "3D" template.
+    *   Save the scene by going to `File > Save As...`.
+    *   Navigate to the `assets/Scenes` directory.
+    *   Name the scene `MainGame` and click "Save".
+
+2.  **Camera Setup**:
+    *   A "Main Camera" is usually created by default. If not, create one: `GameObject > Camera`.
+    *   Select the "Main Camera" in the Hierarchy window.
+    *   **Position**: Set to approximately `(X: 0, Y: 10, Z: -10)`. This provides an angled top-down view. Adjust as needed based on platform size.
+    *   **Rotation**: Set to approximately `(X: 45, Y: 0, Z: 0)`. This makes the camera look down towards the positive Z-axis, where the game elements will be placed.
+    *   **Clear Flags**: Set to "Skybox" (default) or "Solid Color" if preferred.
+    *   **Projection**: Ensure it's set to "Perspective".
+
+3.  **Lighting Setup**:
+    *   A "Directional Light" is usually created by default. If not, create one: `GameObject > Light > Directional Light`.
+    *   Select the "Directional Light" in the Hierarchy window.
+    *   **Position**: The position of a directional light doesn't matter for its effect, but for organization, it can be set to `(X: 0, Y: 5, Z: 0)`.
+    *   **Rotation**: Set to approximately `(X: 50, Y: -30, Z: 0)`. This provides a good general illumination with some soft shadows. Adjust as needed for desired visual style.
+    *   **Intensity**: Default is usually 1. Adjust if the scene is too bright or too dark.
+    *   **Shadow Type**: "Soft Shadows" are generally preferred for better visuals, but "No Shadows" can be used for performance on lower-end platforms initially.
+
+4.  **Placeholder Game Objects (Conceptual for now)**:
+    *   These will be formally created as prefabs later. For initial setup and visualization:
+    *   **Platform**:
+        *   Create a Cube: `GameObject > 3D Object > Cube`.
+        *   Rename it to `Placeholder_Platform`.
+        *   **Position**: `(X: 0, Y: 0, Z: 0)`.
+        *   **Scale**: Adjust to represent the main game area (e.g., `X: 10, Y: 0.5, Z: 15`).
+    *   **Coin**:
+        *   Create a Sphere or Cylinder: `GameObject > 3D Object > Sphere` (or Cylinder for a more coin-like shape).
+        *   Rename it to `Placeholder_Coin`.
+        *   **Position**: Place it above the platform (e.g., `X: 0, Y: 2, Z: 0`) for visibility.
+        *   **Scale**: Adjust to a suitable coin size (e.g., `X: 0.5, Y: 0.1, Z: 0.5` if using a cylinder, or `X:0.5, Y:0.5, Z:0.5` for a sphere).
+
+5.  **Save Scene**:
+    *   After making these changes, save the scene again (`File > Save`).
+
+This document outlines the initial steps for setting up the `MainGame` scene. Actual implementation of these steps will occur within the Unity Editor. Placeholder objects will be replaced with actual game assets and prefabs in subsequent development stages.
